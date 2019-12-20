@@ -18,9 +18,6 @@ public class User {
         private String address2 = "";
         private String address3 = "";
         private String customerPhone = "";
-        private Boolean hasAccount;
-        private float discount;
-
 
         //Get the value of the user email
         public String getUserEmail() {
@@ -101,25 +98,6 @@ public class User {
         public void setCustomerPhone(String phone) {
             this.customerPhone = phone;
         }//setCustomerPhone
-    
-        //Get the value of hasAccount
-        public Boolean getHasAccount() {
-            return hasAccount;
-        }//getHasAccount
-        
-        //Set the value of hasAccount
-        public void setHasAccount(Boolean account) {
-            this.hasAccount = account;
-        }//sethasAccount
-    
-        //Get the value of discount
-        public float getDiscount() {
-            return discount;
-        }//getDiscount
-        
-        //Set the value of discount
-        public void setDiscount(Float discountRate) {
-            this.discount = discountRate;
-        }//setDiscount    
+     
     }
 }
