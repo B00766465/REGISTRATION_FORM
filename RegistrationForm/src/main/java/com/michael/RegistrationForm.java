@@ -45,14 +45,15 @@ public class RegistrationForm<T extends User> extends VerticalLayout {
         Label cancelLabel = new Label("<strong>Click Cancel to cancel your registration</strong>", ContentMode.HTML);
         Button cancelButton = new Button("Cancel");
         cancelButton.addClickListener(e -> {
-            cancelLabel.setValue("Your registration is cancelled!");
+            cancelLabel.setValue("<h3><strong> Your registration is cancelled!</strong></h3>");
         });
 
         //Layouts
         HorizontalLayout hLayout = new HorizontalLayout();
-        //HorizontalLayout hLayout2 = new HorizontalLayout();
+        HorizontalLayout hLayout2 = new HorizontalLayout();
         hLayout.addComponents(registerButton, registeredLabel, cancelButton, cancelLabel);
-        addComponents(userEmail, userPassword,confirmPassword, customerName, contactName,address1, address2, address3, phone, hLayout);
+        hLayout2.addComponents(userEmail, userPassword, confirmPassword);
+        addComponents(hLayout2, customerName, contactName,address1, address2, address3, phone, hLayout);
         
     }
 
