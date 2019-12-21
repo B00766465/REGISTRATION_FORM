@@ -1,23 +1,38 @@
 package com.michael;
 
-import java.io.Serializable;
-
 /**
  * Program to define the user class
  * 
  */
 
 public class User {
-    @SuppressWarnings("serial")
-    public class Customer implements Serializable, Cloneable {
-        private String userEmail = "";
-        private String userPassword = "";
-        private String customerName = "";
-        private String contactName = "";
-        private String address1 = "";
-        private String address2 = "";
-        private String address3 = "";
-        private String customerPhone = "";
+    //Declare the variables
+        private String userEmail;
+        private String userPassword;
+        private String customerName;
+        private String contactName;
+        private String address1;
+        private String address2;
+        private String address3;
+        private String phone;
+
+        //Default Constructor
+        public User(){
+        }
+
+        //
+        public User(String userEmail, String userPassword, String customerName, String contactName, String address1, String address2, String address3, String phone)  {
+            this.userEmail = userEmail;
+            this.userPassword = userPassword;
+            this.customerName = customerName;
+            this.address1 = address1;
+            this.address2 = address2;
+            this.address3 = address3;
+            this.phone = phone; 
+
+        }//
+
+        //Setter and getter methods
 
         //Get the value of the user email
         public String getUserEmail() {
@@ -90,14 +105,13 @@ public class User {
         }//setAddress2
         
         //Get the value of customerPhone
-        public String getCustomerPhone() {
-            return customerPhone;
+        public String getPhone() {
+            return phone;
             }//getcustomerPhone
 
         //Set the value of customerPhone
-        public void setCustomerPhone(String phone) {
-            this.customerPhone = phone;
+        public void setPhone(String custPhone) {
+            this.phone = custPhone;
         }//setCustomerPhone
      
     }
-}
